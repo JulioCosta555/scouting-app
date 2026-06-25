@@ -1,0 +1,101 @@
+/* style.css
+   Adapted from the original Quarto custom2.css. Quarto chrome rules were
+   dropped (no Quarto here); the input + layout styling is preserved. */
+
+:root {
+  --bg: #ffffff;
+  --fg: #1a1d1c;
+  --panel: #fafafa;
+  --border: #e0e0e0;
+  --accent: #0066bb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, system-ui, "Segoe UI", sans-serif;
+}
+
+main {
+  padding: 12px;
+  max-width: 100%;
+}
+
+.app-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 4px 0 12px;
+}
+
+.status {
+  font-size: 13px;
+  color: #888;
+  padding: 6px 2px;
+}
+
+.region {
+  margin-bottom: 12px;
+}
+
+.downloads {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ---- Observable Inputs (range, select, checkbox, radio, text) ---- */
+.observablehq-input,
+form.oi {
+  background: var(--panel);
+  color: var(--fg);
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-family: -apple-system, system-ui, sans-serif;
+  border: 1px solid var(--border);
+}
+
+.observablehq-input label {
+  color: #555;
+}
+
+.observablehq-input select,
+.observablehq-input input[type="text"],
+.observablehq-input input[type="number"] {
+  background: #ffffff;
+  color: var(--fg);
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.observablehq-input input[type="range"] {
+  accent-color: var(--accent);
+}
+
+.observablehq-input input[type="checkbox"],
+.observablehq-input input[type="radio"] {
+  accent-color: var(--accent);
+}
+
+/* Hide empty output containers the runtime may create */
+.observablehq:empty {
+  display: none;
+}
+
+pre,
+code {
+  background: #f5f5f5;
+  color: var(--fg);
+}
+
+a {
+  color: var(--accent);
+}

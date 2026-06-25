@@ -1,0 +1,5 @@
+.DS_Store
+*.log
+
+# Vendored libraries are COMMITTED on purpose (same-origin, edge-cached).
+# Do not ignore public/vendor/*.js or inspector.css.
