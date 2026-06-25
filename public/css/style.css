@@ -27,11 +27,60 @@ main {
   max-width: 100%;
 }
 
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0 12px;
+}
+
 .app-title {
   font-size: 18px;
   font-weight: 700;
-  margin: 4px 0 12px;
+  margin: 0;
 }
+
+.social {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1;
+  transition: opacity 0.15s ease, transform 0.05s ease;
+}
+
+.social-btn:hover {
+  opacity: 0.9;
+}
+
+.social-btn:active {
+  transform: translateY(1px);
+}
+
+.social-btn svg {
+  flex-shrink: 0;
+}
+
+.social-btn.twitter {
+  background: #000000;
+}
+
+.social-btn.linkedin {
+  background: #0a66c2;
+}
+
 
 .status {
   font-size: 13px;
